@@ -225,10 +225,6 @@ body {
   transition: flex 0.5s ease;
 }
 
-.case-study-strip:hover {
-  flex: 2;
-}
-
 .case-study-strip-inner {
   display: flex;
   height: 100%;
@@ -255,11 +251,6 @@ body {
   flex-shrink: 0;
 }
 
-.case-study-strip:hover .case-study-strip-label {
-  min-width: auto;
-  transform: rotate(0);
-}
-
 .case-study-strip-details {
   display: flex;
   width: 100%;
@@ -269,12 +260,9 @@ body {
   overflow: hidden;
   opacity: 0;
   max-height: 0;
-  transition: opacity 0.4s ease 0.15s, max-height 0.5s ease;
-}
-
-.case-study-strip:hover .case-study-strip-details {
-  max-height: 100%;
-  opacity: 1;
+  transition:
+    opacity 0.4s ease 0.15s,
+    max-height 0.5s ease;
 }
 
 .case-study-strip-subtitle {
@@ -297,18 +285,77 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Desktop / devices that support hover: accordion expand */
+@media (hover: hover) and (min-width: 768px) {
+  .case-study-strip:hover {
+    flex: 2;
+  }
+
+  .case-study-strip:hover .case-study-strip-label {
+    min-width: auto;
+    transform: rotate(0);
+  }
+
+  .case-study-strip:hover .case-study-strip-details {
+    max-height: 100%;
+    opacity: 1;
+  }
+}
+
+/* Mobile: stacked cards with always-visible copy */
 @media (max-width: 767px) {
   .case-study-accordion {
-    height: 320px;
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+    padding: 0;
+    background: transparent;
+    overflow: visible;
   }
 
   .case-study-strip {
-    min-width: 40px;
+    flex: none;
+    height: auto;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .case-study-strip-inner {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    padding: 1.15rem 1.25rem;
   }
 
   .case-study-strip-label {
-    min-width: 10em;
-    font-size: 0.7rem;
+    min-width: 0;
+    padding: 0;
+    text-align: left;
+    transform: none;
+    white-space: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+  }
+
+  .case-study-strip-details {
+    opacity: 1;
+    max-height: none;
+    overflow: visible;
+    gap: 0.5rem;
+  }
+
+  .case-study-strip-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .case-study-strip-description {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .case-study-strip-tags {
+    font-size: 0.8rem;
   }
 }
 
