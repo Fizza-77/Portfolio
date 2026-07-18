@@ -10,7 +10,15 @@ export const techStack: TechCategory[] = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "FastAPI", "Supabase", "PostgreSQL"],
+    items: [
+      "Node.js",
+      "Express",
+      "FastAPI",
+      "Prisma",
+      "REST APIs",
+      "JWT",
+      "Supabase",
+    ],
   },
   {
     category: "AI",
@@ -18,6 +26,17 @@ export const techStack: TechCategory[] = [
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub", "Docker", "Vercel", "Linux"],
+    items: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Vercel",
+      "Linux",
+      "Postman",
+      "VS Code",
+      "Figma",
+      "npm",
+      "Cloudinary",
+    ],
   },
 ];

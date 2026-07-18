@@ -20,7 +20,7 @@ const itemVariants = {
 
 export default function Experience() {
   return (
-    <section className="experience-section relative px-6 py-24 text-white md:px-10 md:py-32 lg:px-16">
+    <section className="experience-section relative px-4 py-20 text-white sm:px-6 sm:py-24 md:px-10 md:py-32 lg:px-16">
       <div className="relative z-10 mx-auto max-w-7xl">
         <motion.h2
           className="mb-12 text-3xl font-bold tracking-tight md:mb-16 md:text-4xl"

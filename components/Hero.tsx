@@ -54,26 +54,30 @@ function scrollToCaseStudies() {
 
 export default function Hero() {
   return (
-    <section className="grain-overlay relative min-h-screen h-screen overflow-x-hidden bg-black text-white">
+    <section className="grain-overlay relative min-h-[100svh] h-[100svh] overflow-x-hidden bg-black text-white">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="absolute top-1/2 left-1/2 h-[min(500px,70vh)] w-[min(700px,85vw)] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto grid h-full max-w-7xl grid-rows-[auto_1fr_auto] px-6 py-8 md:px-10 md:py-10 lg:px-16 lg:py-12">
+      <div className="relative z-10 mx-auto grid h-full max-w-7xl grid-rows-[auto_1fr_auto] px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 lg:px-16 lg:py-12">
         {/* Header */}
         <motion.header
-          className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between"
+          className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:justify-between sm:gap-6 sm:text-left"
           variants={fadeIn}
           initial="hidden"
           animate="visible"
         >
-          <div className="flex flex-col gap-1">
-            <p className="text-base font-medium tracking-tight">{siteConfig.name}</p>
-            <p className="text-sm text-white/50">{siteConfig.title}</p>
+          <div className="flex flex-col gap-1.5 sm:gap-1">
+            <p className="text-2xl font-bold tracking-tight sm:text-base sm:font-medium md:text-lg">
+              {siteConfig.name}
+            </p>
+            <p className="text-base text-white/60 sm:text-sm sm:text-white/50">
+              {siteConfig.title}
+            </p>
           </div>
 
           <nav aria-label="Primary">
-            <ul className="flex items-center gap-6 md:gap-8">
+            <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:justify-start md:gap-x-8">
               {siteConfig.nav.map((item) => (
                 <li key={item.label}>
                   <motion.a
@@ -93,7 +97,7 @@ export default function Hero() {
         </motion.header>
 
         {/* Center heading */}
-        <div className="flex items-center justify-center px-2">
+        <div className="flex items-center justify-center px-1 sm:px-2">
           <motion.div
             variants={slideUp}
             initial="hidden"
@@ -104,13 +108,13 @@ export default function Hero() {
         </div>
 
         {/* Bottom row */}
-        <div className="relative flex items-end justify-between gap-4 overflow-visible">
+        <div className="relative flex items-end justify-between gap-2 overflow-visible sm:gap-4">
           <SocialCards />
 
           <motion.button
             type="button"
             onClick={scrollToCaseStudies}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 cursor-pointer pb-1"
+            className="absolute bottom-0 left-1/2 hidden -translate-x-1/2 cursor-pointer pb-1 sm:block"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1, ease }}
@@ -143,7 +147,7 @@ function ProfileImage() {
 
   return (
     <motion.div
-      className="group relative size-28 shrink-0 origin-bottom-right cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-zinc-800 shadow-lg sm:size-36 md:size-[220px]"
+      className="group relative size-24 shrink-0 origin-bottom-right cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-zinc-800 shadow-lg sm:size-36 md:size-[220px]"
       whileHover={{
         scale: 1.08,
         y: -8,
@@ -157,7 +161,7 @@ function ProfileImage() {
           src={siteConfig.profileImage}
           alt={`Portrait of ${siteConfig.name}`}
           fill
-          sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 220px"
+          sizes="(max-width: 640px) 96px, (max-width: 768px) 144px, 220px"
           className="object-cover grayscale transition-[filter] duration-300 group-hover:grayscale-0"
           priority
           unoptimized

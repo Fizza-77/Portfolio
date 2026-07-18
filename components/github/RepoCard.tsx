@@ -79,7 +79,7 @@ export default function RepoCard({ repo }: RepoCardProps) {
         </span>
       </div>
 
-      <div className="mt-auto flex items-center justify-between gap-3 border-t border-white/10 pt-4">
+      <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4">
         <time
           className="text-xs text-white/40"
           dateTime={repo.updated_at}
@@ -90,7 +90,7 @@ export default function RepoCard({ repo }: RepoCardProps) {
           href={repo.html_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-3 py-1.5 text-xs font-medium text-white/80 transition-colors duration-300 hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-white"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-white/15 px-3 py-1.5 text-xs font-medium text-white/80 transition-colors duration-300 hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-white"
         >
           View on GitHub
         </a>

@@ -20,10 +20,10 @@ const itemVariants = {
 
 export default function TechStack() {
   return (
-    <section className="relative bg-black px-6 py-24 text-white md:px-10 md:py-32 lg:px-16">
+    <section className="relative bg-black px-4 py-20 text-white sm:px-6 sm:py-24 md:px-10 md:py-32 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <motion.h2
-          className="mb-12 text-3xl font-bold tracking-tight md:mb-16 md:text-4xl"
+          className="mb-8 text-3xl font-bold tracking-tight sm:mb-12 md:mb-16 md:text-4xl"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}

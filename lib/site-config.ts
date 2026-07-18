@@ -10,13 +10,13 @@ export const siteConfig = {
   nav: [
     { label: "Work", href: "#work" },
     { label: "About", href: "#about" },
-    { label: "CV", href: "/cv.pdf", external: true },
+    { label: "CV", href: "#cv" },
     { label: "Contact", href: "#contact" },
   ],
   contact: [
-    { label: "Email", href: "mailto:hello@example.com", icon: "email" as const },
+    { label: "Email", href: "mailto:fizzaijaz11@gmail.com", icon: "email" as const },
     { label: "GitHub", href: "https://github.com/Fizza-77", icon: "github" as const },
-    { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" as const },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/fizza-ijaz-17b10a3aa", icon: "linkedin" as const },
   ],
   profileImage: "/profile.jpeg",
   githubUsername: "Fizza-77",
@@ -32,7 +32,7 @@ export const siteConfig = {
     { owner: "Minahil-24", repo: "dermmate" },
   ],
   cv: {
-    href: "/cv.pdf",
+    href: "/Fizza%20Ijaz%20-%20CV.pdf",
     filename: "Fizza-Ijaz-CV.pdf",
   },
   about: {

@@ -51,12 +51,12 @@ export default function HeroHeadline({ lines }: HeroHeadlineProps) {
 
   return (
     <motion.h1
-      className="max-w-[560px] cursor-default text-center text-[1.75rem] font-bold leading-[1.35] tracking-tight sm:text-3xl md:text-4xl md:leading-[1.3] lg:text-[2.75rem]"
+      className="max-w-[min(100%,560px)] cursor-default text-center text-[1.4rem] font-bold leading-[1.35] tracking-tight sm:text-3xl md:text-4xl md:leading-[1.3] lg:text-[2.75rem]"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       animate={{
-        letterSpacing: hovered ? "0.025em" : "0em",
-        scale: hovered ? 1.02 : 1,
+        letterSpacing: hovered ? "0.015em" : "0em",
+        scale: hovered ? 1.01 : 1,
       }}
       transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
     >

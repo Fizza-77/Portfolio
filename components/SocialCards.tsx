@@ -62,7 +62,7 @@ function SocialIcon({ icon }: { icon: "email" | "github" | "linkedin" }) {
 export default function SocialCards() {
   return (
     <motion.ul
-      className="flex items-end gap-2 overflow-visible sm:gap-2.5"
+      className="flex items-end gap-1.5 overflow-visible sm:gap-2.5"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

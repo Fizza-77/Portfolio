@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-black px-6 py-24 text-white md:px-10 md:py-32 lg:px-16"
+      className="relative overflow-hidden bg-black px-4 py-20 text-white sm:px-6 sm:py-24 md:px-10 md:py-32 lg:px-16"
     >
       <MatrixBackground />
 

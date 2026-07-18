@@ -1,7 +1,7 @@
 export default function GithubSectionSkeleton() {
   return (
     <section
-      className="relative bg-black px-6 py-24 text-white md:px-10 md:py-32 lg:px-16"
+      className="relative bg-black px-4 py-20 text-white sm:px-6 sm:py-24 md:px-10 md:py-32 lg:px-16"
       aria-busy="true"
       aria-label="Loading GitHub activity"
     >
